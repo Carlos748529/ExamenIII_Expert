@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Diagnóstico Médico</h3>
+            </div>
+            <div class="card-body">
+                <form id="diagnosticoForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="fiebre" name="fiebre">
+                                <label class="form-check-label" for="fiebre">Fiebre</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tos" name="tos">
+                                <label class="form-check-label" for="tos">Tos</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="dolor_garganta" name="dolor_garganta">
+                                <label class="form-check-label" for="dolor_garganta">Dolor de Garganta</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="dolor_abdominal" name="dolor_abdominal">
+                                <label class="form-check-label" for="dolor_abdominal">Dolor Abdominal</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="nauseas" name="nauseas">
+                                <label class="form-check-label" for="nauseas">Náuseas</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="vomito" name="vomito">
+                                <label class="form-check-label" for="vomito">Vómito</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Realizar Diagnóstico</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="resultadoContainer" class="card mt-4 shadow d-none">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">Resultado del Diagnóstico</h4>
+            </div>
+            <div class="card-body">
+                <div id="diagnosticoResultado"></div>
+                <div id="infoAdicional" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

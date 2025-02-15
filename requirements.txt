@@ -1,0 +1,5 @@
+flask==3.0.2
+requests==2.31.0
+werkzeug==3.0.1
+experta==1.9.4
+frozendict==1.2 
